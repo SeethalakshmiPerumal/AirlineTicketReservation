@@ -163,9 +163,9 @@ namespace AirlineReservation
 	{
 		cout << "++++++++++++++++++++++++++++++" << endl;
 		cout << "Booked Ticket Information:" << endl;
-			cout << "FlightName" <<  getFlightName() << "\t\t"
-			<< getSeatNum() << "\t\t" << getDateofJourney() << endl;
-		cout <<"Passenger Details:" <<","<<"FirstName:"<<"Seetha" <<"LastName:"<<"Perumal"<< endl;
+			cout << "FlightName:" << "\t\t" <<  getFlightName()  << "\t\t" << "BookingId" << getFlightId() << endl;
+			cout << "Seatnumber" << "\t\t" << getSeatNum() << "\t\t" << "DateOfJourney" << "\t\t" << getDateofJourney() << endl;
+		cout <<"Passenger Details:" <<","<<"FirstName:"<<"Seetha" <<"\t\t"<<"LastName:"<<"Perumal"<< endl;
 		cout<<"Status:Booked"<<endl;
 		cout << "++++++++++++++++++++++++++++++" << endl;
 		
@@ -173,7 +173,7 @@ namespace AirlineReservation
 	void Flight::displayFlights() const
 	{
 		cout << "++++++++++++++++++++++++++++++" << endl;
-		cout << "Flight Name:" << getFlightName() << endl;
+		cout << "Flight Name:" << getFlightName() <<"\t\t"<<"BookingId"<<getFlightId()<<endl;
 		cout<< "Source:"<< getFlightSrc() << "\t\t" <<"Destination:"<< getFlightDest() << endl;
 		cout << "Seatnumber:" << getSeatNum()<< "\t\t" <<"Arrivaltime: 10.30 am" << endl;
 		cout << "Date of Journey:" << getDateofJourney() << endl;

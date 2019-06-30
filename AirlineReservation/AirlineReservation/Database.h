@@ -16,7 +16,7 @@ namespace AirlineReservation {
 		Passenger& getPassenger(const std::string& firstName,
 		const std::string& lastName);
 		void displayAll() const;
-		void displayAllSeats() const;
+		
 		
 		
 		//void displayAllSeats() ;const
@@ -27,6 +27,7 @@ namespace AirlineReservation {
 		void reserveSeat(int seatNum);
 		void displayFlights() const;
 		void displayAvailableSeats() const;
+		void displayAllFlights() const;
 		Flight& addFlight(const int flightId, const int seatNum);
 		Flight& addFlight(const int flightId, const int seatNum,const std::string& flightName,
 			const std::string& flightSrc, const std::string& flightDest,

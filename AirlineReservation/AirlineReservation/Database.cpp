@@ -15,7 +15,6 @@ namespace AirlineReservation {
 		thePassenger.setPassengerId(mnextPassengerId++);
 		thePassenger.getPassenger();
 		mpassengers.push_back(thePassenger);
-
 		return mpassengers[mpassengers.size() - 1];
 	}
 
@@ -23,7 +22,7 @@ namespace AirlineReservation {
 	{
 		for (auto& employee : mpassengers) {
 			if (employee.getPassengerId() == pId) {
-				return employee;
+ return employee;
 			}
 		}
 		throw logic_error("No Paasenger found.");
@@ -48,19 +47,21 @@ namespace AirlineReservation {
 		}
 	}
 
-	void Database::displayAllSeats()const
+	void Database::displayAllFlights()const
 	{
 		cout << ".........................................." << endl;
-		cout << "FlightName:"<<"\t\t" << "Source:" << "\t\t" << "Destination:" <<"\t\t"
-			<<"ArrivalTime:"<< endl;
-		cout << "Emirates" << "\t\t" << "Dubai" << "\t\t" << " India" <<"10.30"<< endl;
+		cout << "FlightName:"<<"\t\t" << "Source:" << "\t\t" << "Destination:" <<"\t\t" << "ArrivalTime:" << endl;
+			
+		cout << "Emirates1A1" << "\t\t" << "Dubai" << "\t\t" << " India" << "\t\t" <<"10.30am"<< endl;
 		//cout << "..............................................." << endl;
-		cout << "Available Seats:" << "\t\t" << " 102-- - 103-- - 104" << endl;
+		cout << "Available Seats:" << "\t\t" << " 101,102, 103, 104" << endl;
 		
-		cout << "Emirates" << "\t\t" << "Seattle" <<"\t\t" <<" Dubai" << "9.30" << endl;
+		cout << "Emirates2A2" << "\t\t" << "Seattle" <<"\t\t" <<" Dubai" <<"\t\t"<< "9.30pm" << endl;
 		
-		cout << "Available Seats:" << "\t\t" << "201---202---203---204" << endl;
+		cout << "Available Seats:" << "\t\t" << "201,202,203,204" << endl;
 		cout << ".........................................." << endl;
+		cout << "Alaska3A3" << "\t\t" << "Seattle" << "\t\t" << " Newyork" << "\t\t" << "1.30pm" << endl;
+		cout << "Available Seat Numbers:" << "\t\t" << "301---302---303---304" << endl;
 		
 		
 	}

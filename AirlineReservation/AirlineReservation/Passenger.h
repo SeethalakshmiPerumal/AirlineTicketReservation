@@ -55,7 +55,7 @@
 	public:
 		Flight() = default;
 		Flight(const int flightId, const int seatNum);
-	Flight (const int flightId, const int seatNum,const std::string& flightName, 
+	    Flight (const int flightId, const int seatNum,const std::string& flightName, 
 		const std::string& flightSrc,const std::string& flightDest,const std::string& dateofJourney);
 		
 		void reserveSeat(int seatNum=1);

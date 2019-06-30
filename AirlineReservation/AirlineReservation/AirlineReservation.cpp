@@ -24,7 +24,7 @@ int main()
 		case 0:
 			return 0;
 		case 1:
-			employeeDB.displayAvailableSeats();
+			employeeDB.displayAllFlights();
 			//doBooking(employeeDB);
 			break;
 		
@@ -36,11 +36,13 @@ int main()
 			doPassenger(employeeDB);
 				break;
 		case 4:
-			employeeDB.displayAllSeats();
+			employeeDB.displayAvailableSeats();
 			break;
 		case 5:
 			employeeDB.doReservation();
 			break;
+		case 6:
+			return 0;
 		default:
 			cerr << "Unknown command." << endl;
 			break;
@@ -59,12 +61,12 @@ int displayMenu()
 	cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
 	cout << " ..................... MENU OPTIONS .............................\n" << endl;
 	cout << "-----------------" << endl;
-	cout << "1) Reserve Seat" << endl;
-	cout << "2) Flight Schedule" << endl;
-	cout << "3) Passenger details" << endl;
-	cout << "4) Flight details" << endl;
+	cout << "1) Flight Details " << endl;
+	cout << "2) Make Reservation " << endl;
+	cout << "3) Passenger Details" << endl;
+	cout << "4) Flight schdeule" << endl;
 	cout << "5) User Ticket information" << endl;
-	cout << "7) Exit the Program" << endl;
+	cout << "6) Exit the Program" << endl;
 	cout << endl;
 	cout << "Enter Option:: ";
 
@@ -115,7 +117,7 @@ cin >> flightId;
 void doBooking(Database & db)
 {
 	//employeeDB.displayAllSeats();
-	int seatNum;
+	 int seatNum;
 	int flightId;
 	string flightName;
 	string flightSrc;
@@ -136,7 +138,8 @@ void doBooking(Database & db)
 
 
 	db.addFlight(seatNum, flightId, flightName, flightSrc, flightDest,dateofjourney);
-	employeeDB.displayFlights();
+
+	//employeeDB.displayFlights();
 	
 }
 
